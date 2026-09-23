@@ -79,9 +79,6 @@
   .on-light .display .d{ color:rgba(20,7,9,.35); }
   .lede{ font-size:clamp(15px, 1.3vw, 18px); line-height:1.5; letter-spacing:-0.02em; color:var(--soft); max-width:520px; }
   .on-light .lede{ color:var(--ink-soft); }
-  .pill{ display:inline-flex; align-items:center; gap:8px; font-size:11.5px; font-weight:500; letter-spacing:.02em; padding:6px 12px; border-radius:100px; border:1px solid rgba(227,194,122,.45); color:var(--tier-ouro); }
-  .pill::before{ content:""; width:5px; height:5px; border-radius:50%; background:currentColor; }
-  .on-light .pill{ color:#8a6318; border-color:rgba(138,99,24,.35); background:rgba(227,194,122,.16); }
 
   .btn{ display:inline-flex; align-items:center; justify-content:center; gap:12px; height:64px; padding:0 28px; border-radius:6px; font-family:var(--body); font-weight:500; font-size:17px; letter-spacing:-0.03em; border:1px solid transparent; cursor:pointer; transition:background .25s, border-color .25s, transform .25s var(--ease); white-space:nowrap; }
   .btn [data-lucide]{ width:22px; height:22px; transition:transform .3s var(--ease); }
@@ -352,7 +349,6 @@
   .phone svg{ position:absolute; inset:0; width:100%; height:100%; }
   .phone img{ position:relative; z-index:1; display:block; width:auto; max-width:min(82%, 440px); max-height:720px; object-fit:contain; filter:drop-shadow(0 30px 50px rgba(0,0,0,.55)); transition:opacity .22s ease, transform .38s var(--ease); }
   .phone img.changing{ opacity:0; transform:translateY(14px) scale(.985); }
-  .phone-cap{ margin-top:16px; text-align:center; font-size:13px; color:var(--dim); }
   @media (max-width:959px){ .phone{ min-height:0; aspect-ratio:4/5; } .phone img{ max-width:min(78%, 400px); max-height:94%; } }
   @media (max-width:520px){ .use-item{ grid-template-columns:48px 1fr; gap:14px; padding:24px 0; } .use-n{ width:42px; height:42px; } .phone{ aspect-ratio:3/4; } .phone img{ max-width:88%; } }
 
@@ -528,7 +524,6 @@
 <section class="section" id="universos">
   <div class="wrap">
     <div class="section-head center reveal">
-      <span class="pill">Faixas em validação final</span>
       <span class="eyebrow">Universos</span>
       <h2 class="display">O seu universo <span class="d">de experiências.</span></h2>
       <p class="lede">Seu Universo evolui conforme o seu relacionamento se aprofunda. Cada patamar amplia o acesso ao que o Flamboyant tem de mais exclusivo.</p>
@@ -569,8 +564,7 @@
   <div class="wrap">
     <div class="section-head split reveal">
       <div>
-        <span class="pill">Detalhes por categoria em fechamento</span>
-        <div style="margin-top:18px"><span class="eyebrow">Benefícios</span></div>
+        <span class="eyebrow">Benefícios</span>
         <h2 class="display" style="margin-top:22px">O que cada Universo <span class="d">proporciona de experiências.</span></h2>
       </div>
       <p class="lede">Desfrute de experiências selecionadas em moda, gastronomia, bem-estar, cultura e entretenimento, lapidadas especialmente para você, cliente Red Flamboyant. Cada Universo acumula as vantagens do anterior, somando benefícios exclusivos a cada novo patamar.</p>
@@ -614,8 +608,7 @@
   <div class="wrap">
     <div class="use">
       <div class="reveal">
-        <span class="pill">Fluxo em validação com o time de tecnologia</span>
-        <div style="margin-top:18px"><span class="eyebrow">Como utilizar os benefícios</span></div>
+        <span class="eyebrow">Como utilizar os benefícios</span>
         <h2 class="display" style="margin:22px 0 48px">Do Universo conquistado <span class="d">ao benefício na mão.</span></h2>
         <div class="use-list" role="tablist" aria-label="Etapas para utilizar os benefícios">
           <button class="use-item active" type="button" role="tab" aria-selected="true" aria-controls="usePhone" data-screen="images/telas/image 01.png" data-alt="Tela inicial de fidelidade do app Red Flamboyant"><span class="use-n">1</span><span class="use-copy"><span class="use-title">Acesse o Red Flamboyant</span><span class="use-desc">Abra o app e toque na aba Red Flamboyant.</span></span></button>
@@ -644,7 +637,6 @@
           </svg>
           <img id="usePhone" src="images/telas/image 01.png" alt="Tela inicial de fidelidade do app Red Flamboyant">
         </div>
-        <p class="phone-cap">Proposta inicial de fluxo. Passo a passo final a confirmar com o time de produto.</p>
       </div>
     </div>
   </div>
