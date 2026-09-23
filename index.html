@@ -203,6 +203,22 @@
   .p3 strong{ display:block; font-family:var(--body); font-weight:400; font-size:clamp(26px, 2.5vw, 35px); letter-spacing:-0.05em; }
   .p3 strong em{ font-style:normal; color:var(--red-hot); }
   .p3 span{ display:block; margin-top:6px; font-size:clamp(14px, 1.15vw, 17px); line-height:1.25; letter-spacing:-0.02em; color:rgba(255,255,255,.6); }
+  @media (max-width:767px){
+    .panels{ gap:1px; background:rgba(255,255,255,.12); }
+    .panel{ min-height:0; padding:28px var(--pad); }
+    .p1{ min-height:230px; gap:26px; }
+    .p1 h3{ max-width:82%; font-size:clamp(27px, 7.4vw, 34px); }
+    .p1 .deco{ right:-42px; bottom:-46px; width:190px; height:190px; opacity:.13; }
+    .p2{ min-height:190px; gap:24px; }
+    .cards{ min-height:92px; }
+    .card{ align-items:center; }
+    .card:not(.active){ visibility:hidden; transition:none; }
+    .card .ic{ width:48px; height:48px; }
+    .card p{ font-size:17px; line-height:1.28; }
+    .p3{ min-height:210px; padding-top:30px; padding-bottom:30px; }
+    .p3 img{ width:128px; }
+    .p3 strong{ font-size:29px; }
+  }
 
   /* ============ COMO FUNCIONA ============ */
   #como-funciona{ background:var(--black); }
@@ -350,7 +366,22 @@
   .phone img{ position:relative; z-index:1; display:block; width:auto; max-width:min(82%, 440px); max-height:720px; object-fit:contain; filter:drop-shadow(0 30px 50px rgba(0,0,0,.55)); transition:opacity .22s ease, transform .38s var(--ease); }
   .phone img.changing{ opacity:0; transform:translateY(14px) scale(.985); }
   @media (max-width:959px){ .phone{ min-height:0; aspect-ratio:4/5; } .phone img{ max-width:min(78%, 400px); max-height:94%; } }
-  @media (max-width:520px){ .use-item{ grid-template-columns:48px 1fr; gap:14px; padding:24px 0; } .use-n{ width:42px; height:42px; } .phone{ aspect-ratio:3/4; } .phone img{ max-width:88%; } }
+  @media (max-width:520px){
+    #como-usar.section{ padding-top:72px; padding-bottom:72px; }
+    #como-usar .eyebrow{ font-size:10px; letter-spacing:.19em; }
+    #como-usar .display{ max-width:100%; margin:20px 0 32px !important; font-size:30px; line-height:1.04; }
+    .use{ gap:34px; }
+    .use-list{ flex-direction:row; gap:12px; width:calc(100% + var(--pad)); overflow-x:auto; padding:4px var(--pad) 18px 0; scroll-snap-type:x mandatory; overscroll-behavior-x:contain; scrollbar-width:none; }
+    .use-list::-webkit-scrollbar{ display:none; }
+    .use-item{ flex:0 0 min(82vw, 340px); min-height:178px; grid-template-columns:44px 1fr; gap:14px; padding:20px; border:1px solid rgba(255,255,255,.11); border-radius:18px; background:linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.018)); scroll-snap-align:start; box-shadow:inset 1px 1px 0 rgba(255,255,255,.08); }
+    .use-item:last-child{ border-bottom:1px solid rgba(255,255,255,.11); }
+    .use-item:not(.active){ opacity:.68; }
+    .use-n{ width:42px; height:42px; }
+    .use-title{ font-size:22px; line-height:1.08; }
+    .use-desc{ margin-top:10px; font-size:14px; line-height:1.5; }
+    .phone{ aspect-ratio:3/4; }
+    .phone img{ max-width:88%; }
+  }
 
   /* ============ FAQ ============ */
   #duvidas{ background:linear-gradient(180deg, var(--black), var(--wine-950)); }
@@ -387,9 +418,8 @@
   .stores{ display:flex; justify-content:center; gap:12px; margin-top:26px; flex-wrap:wrap; }
   .store{ display:inline-flex; align-items:center; justify-content:center; gap:11px; min-width:152px; height:50px; padding:0 21px; border-radius:100px; border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.012); color:rgba(255,255,255,.82); font-size:15px; letter-spacing:-.015em; transition:border-color .3s, color .3s, background .3s, transform .3s; }
   .store:hover{ transform:translateY(-2px); border-color:rgba(255,255,255,.4); background:rgba(255,255,255,.04); color:#fff; }
-  .store-mark{ display:block; flex:none; width:24px; height:27px; }
-  .store-mark.apple{ fill:currentColor; }
-  .store-mark.google{ width:25px; height:27px; }
+  .store-mark{ display:grid; place-items:center; flex:none; width:22px; height:22px; color:currentColor; }
+  .store-mark [data-lucide]{ width:20px; height:20px; stroke-width:1.55; }
 
   /* ============ FOOTER ============ */
   footer{ background:var(--black); border-top:1px solid var(--line); padding:clamp(56px, 7vw, 90px) 0 30px; }
@@ -467,7 +497,7 @@
 
   <div class="hero-photo-mob animate-scale-in delay-800"><img src="images/new-hero-2.png" alt="Cliente Red Flamboyant sentada em poltrona vermelha"></div>
 
-  <div class="panels">
+  <div class="panels" id="visao-geral">
     <div class="panel p1 animate-fade-up delay-900">
       <h3>Descubra o Universo que acompanha a sua história com o Flamboyant</h3>
       <a href="#universos">Conhecer os universos</a>
@@ -704,16 +734,11 @@
     </div>
     <div class="stores">
       <span class="store" aria-label="Disponível na App Store">
-        <svg class="store-mark apple" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.28-.07 2.17.7 2.92.76 1.12-.23 2.19-.89 3.38-.8 1.43.12 2.5.68 3.21 1.7-2.95 1.77-2.25 5.66.46 6.75-.54 1.42-1.24 2.83-1.97 4.56M12.03 7.25C11.88 5.14 13.6 3.4 15.57 3.23c.27 2.44-2.22 4.25-3.54 4.02z"/></svg>
+        <span class="store-mark" aria-hidden="true"><i data-lucide="apple"></i></span>
         <span>App Store</span>
       </span>
       <span class="store" aria-label="Disponível no Google Play">
-        <svg class="store-mark google" viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path fill="#00d7fe" d="M3.18 2.02a2.1 2.1 0 0 1 1.37-.16l10.2 10.08-3.1 3.07L3.18 2.02z"/>
-          <path fill="#00f076" d="M3.18 2.02 14.75 12l-3.1 3.01-8.47 7.02a2.1 2.1 0 0 1-.56-1.47V3.49c0-.56.2-1.07.56-1.47z"/>
-          <path fill="#ffce00" d="m14.75 12 3.13-3.1 3.48 1.93c1.02.57 1.02 1.63 0 2.2l-3.51 1.95L14.75 12z"/>
-          <path fill="#f72c5b" d="m11.65 15.01 3.1-3.07 3.1 3.04-13.3 7.18c-.47.26-.95.3-1.37.13l8.47-7.28z"/>
-        </svg>
+        <span class="store-mark" aria-hidden="true"><i data-lucide="play"></i></span>
         <span>Google Play</span>
       </span>
     </div>
@@ -819,6 +844,9 @@
       step.tabIndex = selected ? 0 : -1;
     });
     if (focus) item.focus();
+    if (window.matchMedia('(max-width:520px)').matches) {
+      item.scrollIntoView({ behavior:'smooth', block:'nearest', inline:'center' });
+    }
     clearTimeout(screenTimer);
     usePhone.classList.add('changing');
     screenTimer = setTimeout(() => {
