@@ -9,6 +9,12 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js" defer></script>
 <style>
+  @font-face{ font-family:'Utile Web'; src:url('fonts/Utile-Regular.otf') format('opentype'); font-style:normal; font-weight:200; font-display:swap; }
+  @font-face{ font-family:'Utile Web'; src:url('fonts/Utile-Regular.otf') format('opentype'); font-style:normal; font-weight:300; font-display:swap; }
+  @font-face{ font-family:'Utile Web'; src:url('fonts/Utile-Regular.otf') format('opentype'); font-style:normal; font-weight:400; font-display:swap; }
+  @font-face{ font-family:'Utile Web'; src:url('fonts/Utile-Medium.otf') format('opentype'); font-style:normal; font-weight:500; font-display:swap; }
+  @font-face{ font-family:'Utile Web'; src:url('fonts/Utile-Bold.otf') format('opentype'); font-style:normal; font-weight:600; font-display:swap; }
+  @font-face{ font-family:'Utile Web'; src:url('fonts/Utile-Bold.otf') format('opentype'); font-style:normal; font-weight:700; font-display:swap; }
   :root{
     /* Paleta extraída das peças: preto profundo, vinho, vermelho Flamboyant, luz branca do arco */
     --black:#000;
@@ -32,8 +38,8 @@
     --tier-ouro:#e3c27a;
     --tier-diamante:#a9c6dd;
     --tier-rubi:#ff5a55;
-    --display:'Utile', 'DM Sans', system-ui, sans-serif;
-    --body:'Utile', 'Inter', system-ui, sans-serif;
+    --display:'Utile Web', 'DM Sans', system-ui, sans-serif;
+    --body:'Utile Web', 'Inter', system-ui, sans-serif;
     --ease:cubic-bezier(0.16, 1, 0.3, 1);
     --pad:clamp(20px, 4vw, 40px);
   }
@@ -322,7 +328,7 @@
     .benefit-tab img{ display:block; width:30px; height:30px; margin:0 auto 6px; object-fit:contain; opacity:.55; transition:opacity .25s ease, transform .25s ease; }
     .benefit-tab[aria-selected="true"]{ color:var(--ink); background:rgba(255,255,255,.86); box-shadow:0 7px 18px rgba(64,28,34,.1), inset 0 0 0 1px rgba(255,255,255,.95); }
     .benefit-tab[aria-selected="true"] img{ opacity:1; transform:translateY(-1px) scale(1.05); }
-    .table-wrap{ overflow:hidden; border-radius:18px; }
+    .table-wrap{ overflow:hidden; border-radius:18px; padding-bottom:10px; }
     table{ min-width:0; table-layout:fixed; }
     th, td{ padding:16px 14px; }
     thead th:first-child{ display:none; }
@@ -332,16 +338,19 @@
     .table-wrap[data-tier="3"] thead th:nth-child(4),
     .table-wrap[data-tier="4"] thead th:nth-child(5){ display:table-cell; }
     .tier-head{ justify-content:center; }
-    tbody tr{ display:grid; grid-template-columns:minmax(0,1fr) 96px; align-items:stretch; }
-    tbody th{ display:flex; align-items:center; min-width:0; border-right:1px solid rgba(57,15,23,.065); }
-    tbody td{ display:none; align-items:center; justify-content:center; text-align:center; border-right:0; }
+    tbody{ display:grid; gap:10px; padding:10px 10px 0; }
+    tbody tr, tbody tr:nth-child(even){ display:grid; grid-template-columns:minmax(0,1fr); min-width:0; overflow:hidden; border:1px solid rgba(57,15,23,.08); border-radius:14px; background:rgba(255,255,255,.48); box-shadow:0 8px 24px rgba(64,28,34,.045), inset 1px 1px 0 rgba(255,255,255,.85); }
+    tbody tr:hover{ background:rgba(255,255,255,.48); }
+    tbody th{ display:flex; align-items:center; min-width:0; padding:14px; border-right:0; border-bottom:1px solid rgba(57,15,23,.07); }
+    tbody td{ display:none; min-width:0; width:100%; align-items:center; justify-content:flex-start; gap:8px; padding:12px 14px 14px; border:0; text-align:left; font-size:13px; line-height:1.45; overflow-wrap:anywhere; word-break:normal; }
     .table-wrap[data-tier="1"] tbody td:nth-child(2),
     .table-wrap[data-tier="2"] tbody td:nth-child(3),
     .table-wrap[data-tier="3"] tbody td:nth-child(4),
     .table-wrap[data-tier="4"] tbody td:nth-child(5){ display:flex; }
-    .benefit-label{ min-width:0; gap:11px; font-size:13px; line-height:1.35; }
+    .benefit-label{ width:100%; min-width:0; gap:11px; font-size:13px; line-height:1.35; overflow-wrap:anywhere; }
     .benefit-icon{ width:34px; height:34px; border-radius:11px; }
-    .no-label{ max-width:72px; font-size:8.5px; }
+    td.ok::after{ content:"Incluído"; color:rgba(42,24,28,.62); font-size:12px; font-weight:500; }
+    .no-label{ max-width:none; font-size:9px; }
   }
 
   /* ============ COMO USAR ============ */
