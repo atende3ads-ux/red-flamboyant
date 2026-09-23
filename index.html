@@ -250,6 +250,15 @@
   .tier:hover .tier-icon{ transform:scale(1.09) rotate(3deg); filter:drop-shadow(0 12px 20px rgba(0,0,0,.38)) brightness(1.08); }
   .tier-tag{ margin-top:24px; font-family:var(--display); font-size:19px; letter-spacing:-0.03em; line-height:1.2; }
   .tier-desc{ margin-top:10px; font-size:14.5px; line-height:1.55; color:var(--soft); }
+  @media (max-width:699px){
+    .tiers{ display:block; padding-bottom:28px; }
+    .tier{ position:sticky; margin-bottom:18px; min-height:305px; transform-origin:center top; box-shadow:0 28px 58px rgba(0,0,0,.38), inset 1px 1px 0 rgba(255,255,255,.34), inset -1px -1px 0 rgba(61,6,15,.22); }
+    .tier:nth-child(1){ top:76px; z-index:1; }
+    .tier:nth-child(2){ top:88px; z-index:2; }
+    .tier:nth-child(3){ top:100px; z-index:3; }
+    .tier:nth-child(4){ top:112px; z-index:4; margin-bottom:0; }
+    .tier:hover{ transform:none; }
+  }
   .quote{ margin:clamp(60px, 8vw, 110px) auto 0; max-width:900px; text-align:center; }
   .quote p{ font-family:var(--display); font-weight:300; font-size:clamp(28px, 4vw, 56px); line-height:1.05; letter-spacing:-0.05em; }
   .quote p .d{ color:var(--dim); }
@@ -293,7 +302,34 @@
   td.tbd{ color:#8a6318; font-style:italic; }
   .caption{ display:flex; align-items:center; gap:10px; margin-top:20px; padding-left:4px; font-size:13px; color:var(--ink-soft); }
   .caption::before{ content:""; width:5px; height:5px; flex:none; border-radius:50%; background:var(--red); box-shadow:0 0 12px rgba(200,25,31,.45); }
-  @media (max-width:700px){ .table-wrap{ border-radius:18px; } th, td{ padding:17px 18px; } }
+  .benefit-tabs{ display:none; }
+  @media (max-width:700px){
+    .benefit-tabs{ display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-bottom:12px; padding:6px; border:1px solid rgba(57,15,23,.08); border-radius:18px; background:rgba(255,255,255,.48); box-shadow:0 12px 34px rgba(64,28,34,.08), inset 1px 1px 0 rgba(255,255,255,.9); }
+    .benefit-tab{ min-width:0; border:0; border-radius:13px; padding:10px 4px 9px; background:transparent; color:rgba(42,24,28,.5); font:500 11px/1 var(--body); cursor:pointer; transition:background .25s ease, color .25s ease, box-shadow .25s ease; }
+    .benefit-tab img{ display:block; width:30px; height:30px; margin:0 auto 6px; object-fit:contain; opacity:.55; transition:opacity .25s ease, transform .25s ease; }
+    .benefit-tab[aria-selected="true"]{ color:var(--ink); background:rgba(255,255,255,.86); box-shadow:0 7px 18px rgba(64,28,34,.1), inset 0 0 0 1px rgba(255,255,255,.95); }
+    .benefit-tab[aria-selected="true"] img{ opacity:1; transform:translateY(-1px) scale(1.05); }
+    .table-wrap{ overflow:hidden; border-radius:18px; }
+    table{ min-width:0; table-layout:fixed; }
+    th, td{ padding:16px 14px; }
+    thead th:first-child{ display:none; }
+    thead th:not(:first-child){ display:none; width:100%; }
+    .table-wrap[data-tier="1"] thead th:nth-child(2),
+    .table-wrap[data-tier="2"] thead th:nth-child(3),
+    .table-wrap[data-tier="3"] thead th:nth-child(4),
+    .table-wrap[data-tier="4"] thead th:nth-child(5){ display:table-cell; }
+    .tier-head{ justify-content:center; }
+    tbody tr{ display:grid; grid-template-columns:minmax(0,1fr) 96px; align-items:stretch; }
+    tbody th{ display:flex; align-items:center; min-width:0; border-right:1px solid rgba(57,15,23,.065); }
+    tbody td{ display:none; align-items:center; justify-content:center; text-align:center; border-right:0; }
+    .table-wrap[data-tier="1"] tbody td:nth-child(2),
+    .table-wrap[data-tier="2"] tbody td:nth-child(3),
+    .table-wrap[data-tier="3"] tbody td:nth-child(4),
+    .table-wrap[data-tier="4"] tbody td:nth-child(5){ display:flex; }
+    .benefit-label{ min-width:0; gap:11px; font-size:13px; line-height:1.35; }
+    .benefit-icon{ width:34px; height:34px; border-radius:11px; }
+    .no-label{ max-width:72px; font-size:8.5px; }
+  }
 
   /* ============ COMO USAR ============ */
   #como-usar{ background:var(--black); overflow:hidden; }
@@ -371,6 +407,15 @@
   .foot ul a:hover{ color:#fff; }
   .foot-bottom{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:14px; padding-top:26px; font-size:12.5px; color:rgba(255,255,255,.4); }
   .foot-bottom div{ display:flex; flex-wrap:wrap; gap:20px; }
+  @media (max-width:759px){
+    .foot{ justify-items:center; text-align:center; gap:34px; }
+    .foot > div{ width:100%; }
+    .foot-logo-official{ display:block; margin:0 auto 18px; }
+    .foot-brand p{ margin:0 auto; }
+    .foot ul{ align-items:center; }
+    .foot-bottom{ flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:20px; }
+    .foot-bottom div{ justify-content:center; gap:12px 18px; }
+  }
   .dev-credit{ display:inline-flex; align-items:center; gap:20px; }
   .dev-credit::before{ content:""; width:1px; height:14px; background:rgba(255,255,255,.22); }
   .wordmark{ --wm-x:50%; --wm-y:50%; position:relative; width:100%; max-width:100%; margin-top:clamp(40px, 6vw, 80px); padding:.06em 0 .12em; font-family:var(--display); font-weight:200; font-size:clamp(44px, 10.2vw, 170px); letter-spacing:-0.07em; line-height:1; text-align:center; color:rgba(255,255,255,.03); user-select:none; white-space:nowrap; cursor:default; }
@@ -531,7 +576,13 @@
       <p class="lede">Desfrute de experiências selecionadas em moda, gastronomia, bem-estar, cultura e entretenimento, lapidadas especialmente para você, cliente Red Flamboyant. Cada Universo acumula as vantagens do anterior, somando benefícios exclusivos a cada novo patamar.</p>
     </div>
 
-    <div class="table-wrap reveal">
+    <div class="benefit-tabs reveal" role="tablist" aria-label="Escolha o Universo para comparar os benefícios">
+      <button class="benefit-tab" type="button" role="tab" aria-selected="true" data-tier="1"><img src="images/icons-planos/Prata.png" alt="">Prata</button>
+      <button class="benefit-tab" type="button" role="tab" aria-selected="false" data-tier="2"><img src="images/icons-planos/Ouro.png" alt="">Ouro</button>
+      <button class="benefit-tab" type="button" role="tab" aria-selected="false" data-tier="3"><img src="images/icons-planos/Diamante.png" alt="">Diamante</button>
+      <button class="benefit-tab" type="button" role="tab" aria-selected="false" data-tier="4"><img src="images/icons-planos/Rubi.png" alt="">Rubi</button>
+    </div>
+    <div class="table-wrap reveal" data-tier="1">
       <table>
         <thead>
           <tr>
@@ -678,7 +729,7 @@
 </section>
 
 <!-- ================= FOOTER ================= -->
-<footer>
+<footer id="rodape">
   <div class="wrap">
     <div class="foot">
       <div class="foot-brand">
@@ -736,6 +787,32 @@
   const start = () => { clearInterval(timer); timer = setInterval(() => show((current + 1) % cards.length), 3500); };
   dots.forEach((d, i) => d.addEventListener('click', () => { show(i); start(); }));
   start();
+
+  // Mobile benefit comparison
+  const benefitTabs = [...document.querySelectorAll('.benefit-tab')];
+  const benefitTable = document.querySelector('.table-wrap[data-tier]');
+  benefitTabs.forEach((tab, index) => {
+    tab.tabIndex = index === 0 ? 0 : -1;
+    tab.addEventListener('click', () => {
+      benefitTable.dataset.tier = tab.dataset.tier;
+      benefitTabs.forEach(item => {
+        const selected = item === tab;
+        item.setAttribute('aria-selected', selected ? 'true' : 'false');
+        item.tabIndex = selected ? 0 : -1;
+      });
+    });
+    tab.addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      let target = index;
+      if (event.key === 'ArrowRight') target = (index + 1) % benefitTabs.length;
+      if (event.key === 'ArrowLeft') target = (index - 1 + benefitTabs.length) % benefitTabs.length;
+      if (event.key === 'Home') target = 0;
+      if (event.key === 'End') target = benefitTabs.length - 1;
+      benefitTabs[target].click();
+      benefitTabs[target].focus();
+    });
+  });
 
   // Interactive app flow
   const useItems = [...document.querySelectorAll('.use-item[data-screen]')];
