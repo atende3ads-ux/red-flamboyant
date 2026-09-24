@@ -203,9 +203,9 @@
   .dots button{ flex:1; height:2px; border:none; border-radius:4px; background:rgba(20,7,9,.18); padding:0; cursor:pointer; transition:background .3s; }
   .dots button.active{ background:var(--ink); }
 
-  .p3{ background:linear-gradient(135deg, rgba(19,3,6,.82), rgba(54,8,15,.48)); align-items:center; gap:clamp(16px, 2vw, 28px); border-top:1px solid rgba(255,255,255,.14); }
+  .p3{ background:linear-gradient(135deg, rgba(19,3,6,.82), rgba(54,8,15,.48)); align-items:center; justify-content:center; border-top:1px solid rgba(255,255,255,.14); }
   @media (min-width:768px){ .p3{ border-top:none; border-left:1px solid var(--line); } }
-  .p3 img{ flex:none; width:clamp(120px, 11vw, 208px); aspect-ratio:208/142; object-fit:cover; object-position:center 48%; border-radius:8px; border:1px solid rgba(255,255,255,.18); box-shadow:inset 1px 1px 0 rgba(255,255,255,.28), 0 18px 42px rgba(0,0,0,.28); }
+  .p3 > div{ width:min(100%, 520px); }
   .p3 strong{ display:block; font-family:var(--body); font-weight:400; font-size:clamp(26px, 2.5vw, 35px); letter-spacing:-0.05em; }
   .p3 strong em{ font-style:normal; color:var(--red-hot); }
   .p3 span{ display:block; margin-top:6px; font-size:clamp(14px, 1.15vw, 17px); line-height:1.25; letter-spacing:-0.02em; color:rgba(255,255,255,.6); }
@@ -527,7 +527,6 @@
     </div>
 
     <div class="panel p3 animate-fade-up delay-1100">
-      <img src="images/personagens/007.png" alt="Cliente Red Flamboyant em poltrona vermelha">
       <div><strong><em>4</em> Universos</strong><span>Prata, Ouro, Diamante e Rubi. Cada um mais exclusivo que o anterior.</span></div>
     </div>
   </div>
