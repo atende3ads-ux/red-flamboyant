@@ -31,9 +31,10 @@
 
   .hero{ position:relative; min-height:76vh; overflow:hidden; background:radial-gradient(55% 80% at 78% 38%, rgba(69,4,17,.5), transparent 68%), radial-gradient(42% 62% at 12% 88%, rgba(42,2,8,.48), transparent 72%), var(--black); }
   .topline{ position:relative; z-index:2; padding:10px 16px; border-bottom:1px solid var(--line); text-align:center; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--soft); }
-  .nav{ position:relative; z-index:3; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:18px var(--pad); }
-  .brand{ display:flex; align-items:center; gap:10px; font-family:var(--display); font-size:clamp(21px,2.1vw,28px); letter-spacing:-.05em; }
-  .brand img{ width:34px; height:34px; object-fit:contain; }
+  .nav{ position:relative; z-index:3; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:8px var(--pad); }
+  .brand{ display:flex; align-items:center; flex:none; }
+  .brand img{ display:block; width:auto; height:68px; object-fit:contain; }
+  @media(min-width:900px){ .brand img{ height:82px; } }
   .back{ display:inline-flex; align-items:center; gap:9px; min-height:42px; padding:0 16px; border:1px solid rgba(255,255,255,.22); border-radius:100px; background:rgba(255,255,255,.055); backdrop-filter:blur(16px); font-size:14px; transition:.3s var(--ease); }
   .back:hover{ transform:translateY(-2px); border-color:rgba(255,255,255,.48); background:rgba(255,255,255,.11); }
   .back [data-lucide]{ width:16px; height:16px; }
@@ -105,7 +106,7 @@
   <header class="hero">
     <div class="topline">Red Flamboyant · Programa de Experiências</div>
     <nav class="nav wrap" aria-label="Navegação principal">
-      <a class="brand" href="flamboyant-v0-claude.html"><img src="images/logo.png" alt="">Red Flamboyant</a>
+      <a class="brand" href="flamboyant-v0-claude.html" aria-label="Red Flamboyant, Programa de Experiências"><img src="images/logo-red.png" alt="Red Flamboyant, Programa de Experiências"></a>
       <a class="back" href="flamboyant-v0-claude.html"><i data-lucide="arrow-left"></i><span class="label">Voltar ao programa</span></a>
     </nav>
     <div class="hero-copy">
