@@ -402,8 +402,8 @@
   .use-track{ display:flex; will-change:transform; }
   .use-slide{ position:relative; flex:0 0 100%; min-width:0; display:grid; grid-template-columns:minmax(0,.82fr) minmax(380px,1.18fr); align-items:center; min-height:0; }
   .use-slide-copy{ position:relative; z-index:2; padding:clamp(42px,6vw,78px); }
-  .use-slide-heading{ display:flex; align-items:baseline; gap:18px; }
-  .use-step{ flex:none; font-family:var(--display); font-size:clamp(24px,2.4vw,36px); font-weight:300; line-height:1; color:var(--red); }
+  .use-slide-heading{ display:flex; flex-direction:column; align-items:flex-start; gap:16px; }
+  .use-step{ flex:none; font-size:11px; font-weight:500; letter-spacing:.2em; line-height:1; text-transform:uppercase; color:var(--red); }
   .use-slide-title{ max-width:520px; font-family:var(--display); font-weight:300; font-size:clamp(40px,4.4vw,68px); letter-spacing:-.055em; line-height:.95; color:var(--white); }
   .use-slide-desc{ max-width:480px; margin-top:24px; font-size:clamp(15px,1.35vw,18px); line-height:1.58; color:var(--soft); }
   .use-slide-media{ position:relative; align-self:stretch; min-width:0; min-height:0; display:flex; align-items:center; justify-content:center; overflow:hidden; padding:42px 42px 64px; }
@@ -423,8 +423,8 @@
     .use-carousel{ top:70px; height:calc(100svh - 86px); border-radius:22px; }
     .use-slide{ grid-template-columns:1fr; grid-template-rows:auto minmax(0,1fr); min-height:0; }
     .use-slide-copy{ padding:28px 24px 8px; }
-    .use-slide-heading{ gap:12px; }
-    .use-step{ font-size:24px; }
+    .use-slide-heading{ gap:10px; }
+    .use-step{ font-size:10px; }
     .use-slide-title{ font-size:34px; line-height:.98; }
     .use-slide-desc{ margin-top:16px; font-size:14px; line-height:1.5; }
     .use-slide-media{ min-height:0; padding:8px 18px 54px; }
@@ -704,23 +704,23 @@
         <div class="use-viewport">
           <div class="use-track">
           <article class="use-slide is-active" id="useSlide1" role="group" aria-roledescription="slide" aria-label="1 de 5" aria-hidden="false">
-            <div class="use-slide-copy"><div class="use-slide-heading"><span class="use-step">1</span><h3 class="use-slide-title">Abra o App</h3></div><p class="use-slide-desc">Abra o App e clique na aba Red Flamboyant.</p></div>
+            <div class="use-slide-copy"><div class="use-slide-heading"><span class="use-step">Passo 1</span><h3 class="use-slide-title">Abra o App</h3></div><p class="use-slide-desc">Abra o App e clique na aba Red Flamboyant.</p></div>
             <div class="use-slide-media"><img src="images/image 01.png" alt="Tela inicial de fidelidade do app Red Flamboyant" loading="lazy"></div>
           </article>
           <article class="use-slide" id="useSlide2" role="group" aria-roledescription="slide" aria-label="2 de 5" aria-hidden="true">
-            <div class="use-slide-copy"><div class="use-slide-heading"><span class="use-step">2</span><h3 class="use-slide-title">Selecione o benefício</h3></div><p class="use-slide-desc">Selecione o benefício e clique em Resgatar.</p></div>
+            <div class="use-slide-copy"><div class="use-slide-heading"><span class="use-step">Passo 2</span><h3 class="use-slide-title">Selecione o benefício</h3></div><p class="use-slide-desc">Selecione o benefício e clique em Resgatar.</p></div>
             <div class="use-slide-media"><img src="images/image 02.png" alt="Tela de detalhes e resgate de um benefício no app Red Flamboyant" loading="lazy"></div>
           </article>
           <article class="use-slide" id="useSlide3" role="group" aria-roledescription="slide" aria-label="3 de 5" aria-hidden="true">
-            <div class="use-slide-copy"><div class="use-slide-heading"><span class="use-step">3</span><h3 class="use-slide-title">Receba o código</h3></div><p class="use-slide-desc">O sistema gera o código específico para utilização do benefício resgatado.</p></div>
+            <div class="use-slide-copy"><div class="use-slide-heading"><span class="use-step">Passo 3</span><h3 class="use-slide-title">Receba o código</h3></div><p class="use-slide-desc">O sistema gera o código específico para utilização do benefício resgatado.</p></div>
             <div class="use-slide-media"><img src="images/image 03.png" alt="Tela com o código do benefício resgatado no app Red Flamboyant" loading="lazy"></div>
           </article>
           <article class="use-slide" id="useSlide4" role="group" aria-roledescription="slide" aria-label="4 de 5" aria-hidden="true">
-            <div class="use-slide-copy"><div class="use-slide-heading"><span class="use-step">4</span><h3 class="use-slide-title">Valide na loja</h3></div><p class="use-slide-desc">Cliente vai até a loja e informa o benefício, mostrando o App para o vendedor validar.</p></div>
+            <div class="use-slide-copy"><div class="use-slide-heading"><span class="use-step">Passo 4</span><h3 class="use-slide-title">Valide na loja</h3></div><p class="use-slide-desc">Cliente vai até a loja e informa o benefício, mostrando o App para o vendedor validar.</p></div>
             <div class="use-slide-media"><img src="images/image 04.png" alt="Tela para validação do benefício resgatado na loja" loading="lazy"></div>
           </article>
           <article class="use-slide" id="useSlide5" role="group" aria-roledescription="slide" aria-label="5 de 5" aria-hidden="true">
-            <div class="use-slide-copy"><div class="use-slide-heading"><span class="use-step">5</span><h3 class="use-slide-title">Utilize o benefício</h3></div><p class="use-slide-desc">Benefício liberado para utilização do cliente.</p></div>
+            <div class="use-slide-copy"><div class="use-slide-heading"><span class="use-step">Passo 5</span><h3 class="use-slide-title">Utilize o benefício</h3></div><p class="use-slide-desc">Benefício liberado para utilização do cliente.</p></div>
             <div class="use-slide-media"><img src="images/image 02.png" alt="Tela do benefício liberado para utilização" loading="lazy"></div>
           </article>
           </div>
