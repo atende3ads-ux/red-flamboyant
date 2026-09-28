@@ -172,8 +172,8 @@
     .hero::after{
       opacity:1;
       background:
-        radial-gradient(ellipse 54% 42% at 22% 72%, rgba(0,0,0,.9) 0%, rgba(0,0,0,.7) 42%, rgba(0,0,0,.24) 68%, transparent 82%),
-        linear-gradient(90deg, rgba(0,0,0,.62) 0%, rgba(0,0,0,.34) 32%, transparent 60%);
+        radial-gradient(ellipse 54% 42% at 22% 72%, rgba(0,0,0,.68) 0%, rgba(0,0,0,.46) 42%, rgba(0,0,0,.14) 68%, transparent 82%),
+        linear-gradient(90deg, rgba(0,0,0,.42) 0%, rgba(0,0,0,.22) 32%, transparent 60%);
     }
     .hero-main{
       flex:none;
@@ -822,11 +822,6 @@
     <div class="dome">
       <svg viewBox="0 0 1000 500" aria-hidden="true">
         <defs>
-          <radialGradient id="domeGlow" cx="50%" cy="0%" r="100%">
-            <stop offset="0" stop-color="#3a1418" stop-opacity=".95"/>
-            <stop offset=".55" stop-color="#140507" stop-opacity=".6"/>
-            <stop offset="1" stop-color="#000" stop-opacity="0"/>
-          </radialGradient>
           <linearGradient id="domeStroke" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0" stop-color="#fff" stop-opacity=".95"/>
             <stop offset=".22" stop-color="#fff" stop-opacity=".25"/>
@@ -835,7 +830,6 @@
             <stop offset="1" stop-color="#fff" stop-opacity=".95"/>
           </linearGradient>
         </defs>
-        <path d="M 0 500 A 500 500 0 0 1 1000 500 Z" fill="url(#domeGlow)"/>
         <path d="M 0 500 A 500 500 0 0 1 1000 500" fill="none" stroke="url(#domeStroke)" stroke-width="2.5"/>
       </svg>
       <div class="dome-inner">
