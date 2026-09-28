@@ -172,8 +172,8 @@
     .hero::after{
       opacity:1;
       background:
-        radial-gradient(ellipse 54% 42% at 22% 72%, rgba(0,0,0,.68) 0%, rgba(0,0,0,.46) 42%, rgba(0,0,0,.14) 68%, transparent 82%),
-        linear-gradient(90deg, rgba(0,0,0,.42) 0%, rgba(0,0,0,.22) 32%, transparent 60%);
+        radial-gradient(ellipse 54% 42% at 22% 72%, rgba(0,0,0,.9) 0%, rgba(0,0,0,.7) 42%, rgba(0,0,0,.24) 68%, transparent 82%),
+        linear-gradient(90deg, rgba(0,0,0,.62) 0%, rgba(0,0,0,.34) 32%, transparent 60%);
     }
     .hero-main{
       flex:none;
@@ -515,16 +515,19 @@
   body{ background:var(--red); }
   .hero{
     background:
-      radial-gradient(60% 72% at 78% 42%, rgba(223,42,52,.7), transparent 70%),
-      radial-gradient(48% 58% at 10% 92%, rgba(146,16,26,.46), transparent 72%),
-      var(--red);
+      radial-gradient(55% 60% at 78% 45%, rgba(69,4,17,.5), transparent 70%),
+      radial-gradient(40% 50% at 10% 90%, rgba(42,2,8,.48), transparent 70%),
+      #040101;
   }
-  nav.bar{ background:rgba(146,16,26,.92); border-bottom-color:rgba(255,255,255,.16); }
-  .mobile-menu{ background:rgba(164,15,25,.98); }
+  nav.bar{ background:rgba(7,0,1,.88); border-bottom-color:rgba(255,255,255,.08); }
+  .mobile-menu{ background:rgba(7,0,1,.98); }
   .eyebrow::before{ background:var(--beige); box-shadow:0 0 12px rgba(206,186,152,.72); }
+  .hero .eyebrow::before{ background:var(--red); box-shadow:0 0 12px var(--red); }
   #lounge .eyebrow::before{ background:var(--red); box-shadow:0 0 12px var(--red); }
   .btn-red{ background:var(--red-deep); box-shadow:0 20px 50px -20px rgba(79,3,11,.72); }
   .btn-red:hover{ background:#7f0b14; }
+  .hero .btn-red{ background:var(--red); box-shadow:0 20px 50px -20px rgba(200,25,31,.8); }
+  .hero .btn-red:hover{ background:#d81b25; }
   .p3{ background:linear-gradient(135deg, rgba(146,16,26,.86), rgba(196,21,31,.58)); }
   #como-funciona{
     background:
