@@ -27,9 +27,9 @@
     --red-hot:#d81b25;
     --red-deep:#77000e;
     --beige:#ceba98;
-    --white:#ceba98;
+    --white:#fff;
     --dim:rgba(206,186,152,.46);
-    --soft:rgba(206,186,152,.76);
+    --soft:rgba(255,255,255,.72);
     --line:rgba(206,186,152,.14);
     --cream:#eeeae8;
     --paper:#fbf9f8;
@@ -141,7 +141,7 @@
   .hero-main{ position:relative; z-index:10; flex:1; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; padding:clamp(110px, 14vh, 150px) var(--edge) clamp(72px, 10vh, 130px); }
   .hero-main .eyebrow{ margin-bottom:clamp(18px, 3vh, 30px); }
   .headline{ font-family:var(--display); font-weight:300; letter-spacing:-0.05em; line-height:.9;
-    font-size:clamp(42px, min(10.8vw, 8.6vh), 76px); }
+    font-size:clamp(42px, min(10.8vw, 8.6vh), 76px); color:var(--beige); }
   .headline .line{ display:block; white-space:nowrap; }
   .w{ display:inline-block; overflow:hidden; vertical-align:bottom; padding:.12em .02em .1em; margin:-.12em -.02em -.1em; }
   .w > span{ display:inline-block; animation:wordReveal .7s var(--ease) both; }
@@ -243,6 +243,7 @@
 
   /* ============ COMO FUNCIONA ============ */
   #como-funciona{ background:linear-gradient(145deg, #070001, #2a0208 52%, #040101); }
+  #como-funciona .display, #universos .display, #beneficios .display, #como-usar .display, #duvidas .display, .final h2{ color:var(--beige); }
   #como-funciona .display .d, #universos .display .d, #beneficios .display .d, #como-usar .display .d{ color:var(--dim); }
   .steps{ display:grid; grid-template-columns:1fr; border-top:1px solid var(--line); }
   @media (min-width:760px){ .steps{ grid-template-columns:repeat(2,1fr); } }
@@ -274,8 +275,8 @@
   @media (min-width:1100px){ .tiers{ grid-template-columns:repeat(4,1fr); } }
   .tier{ --tier-head:#450411; position:relative; isolation:isolate; overflow:hidden; min-height:430px; display:flex; flex-direction:column; border-radius:18px; background:#f8f6f5; color:var(--ink); border:1px solid rgba(255,255,255,.48); box-shadow:0 24px 54px rgba(0,0,0,.28); transition:transform .5s var(--ease), box-shadow .5s var(--ease); }
   .tier:hover{ transform:translateY(-4px); box-shadow:0 30px 64px rgba(0,0,0,.34); }
-  .tier-top{ min-height:132px; display:grid; grid-template-columns:minmax(0,1fr) 78px; align-items:center; gap:12px; padding:22px 22px 20px; background:var(--tier-head); color:var(--white); }
-  .tier-name{ font-family:var(--display); font-weight:300; font-size:clamp(31px, 3vw, 38px); letter-spacing:-0.05em; color:var(--white); }
+  .tier-top{ min-height:132px; display:grid; grid-template-columns:minmax(0,1fr) 78px; align-items:center; gap:12px; padding:22px 22px 20px; background:var(--tier-head); color:var(--beige); }
+  .tier-name{ font-family:var(--display); font-weight:300; font-size:clamp(31px, 3vw, 38px); letter-spacing:-0.05em; color:var(--beige); }
   .tier-icon-wrap{ width:78px; height:78px; display:grid; place-items:center; }
   .tier-icon{ width:76px; height:76px; object-fit:contain; filter:drop-shadow(0 8px 14px rgba(0,0,0,.3)); transition:transform .55s var(--ease), filter .4s; }
   .tier:hover .tier-icon{ transform:scale(1.09) rotate(3deg); filter:drop-shadow(0 12px 20px rgba(0,0,0,.38)) brightness(1.08); }
@@ -313,11 +314,11 @@
   table{ width:100%; min-width:980px; border-collapse:separate; border-spacing:0; }
   th, td{ text-align:left; vertical-align:middle; padding:20px 22px; font-size:14px; line-height:1.5; border-right:1px solid rgba(57,15,23,.18); border-bottom:1px solid rgba(57,15,23,.18); }
   th:last-child, td:last-child{ border-right:none; }
-  thead th{ padding-top:22px; padding-bottom:22px; background:linear-gradient(145deg, rgba(20,4,8,.98), rgba(48,9,17,.94)); color:var(--white); font-family:var(--display); font-weight:400; font-size:18px; letter-spacing:-0.03em; border-color:rgba(255,255,255,.075); }
-  thead th:first-child{ width:30%; color:var(--white); font-family:var(--body); font-size:12px; letter-spacing:0; text-transform:none; }
+  thead th{ padding-top:22px; padding-bottom:22px; background:linear-gradient(145deg, rgba(20,4,8,.98), rgba(48,9,17,.94)); color:var(--beige); font-family:var(--display); font-weight:400; font-size:18px; letter-spacing:-0.03em; border-color:rgba(255,255,255,.075); }
+  thead th:first-child{ width:30%; color:var(--beige); font-family:var(--body); font-size:12px; letter-spacing:0; text-transform:none; }
   thead th:not(:first-child){ width:17.5%; }
   .benefit-head, .tier-head{ display:flex; align-items:center; gap:12px; }
-  .benefit-head-icon{ width:42px; height:42px; display:grid; place-items:center; flex:none; border-radius:14px; color:var(--white); border:1px solid rgba(255,255,255,.16); background:rgba(255,255,255,.07); box-shadow:inset 1px 1px 0 rgba(255,255,255,.12); }
+  .benefit-head-icon{ width:42px; height:42px; display:grid; place-items:center; flex:none; border-radius:14px; color:var(--beige); border:1px solid rgba(255,255,255,.16); background:rgba(255,255,255,.07); box-shadow:inset 1px 1px 0 rgba(255,255,255,.12); }
   .benefit-head-icon [data-lucide]{ width:19px; height:19px; }
   .benefit-head-copy, .tier-head-copy{ display:flex; flex-direction:column; gap:2px; }
   .benefit-head-copy small, .tier-head-copy small{ font-family:var(--body); font-size:9px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.48); }
@@ -393,42 +394,49 @@
 
   /* ============ COMO USAR ============ */
   #como-usar{ background:linear-gradient(145deg, #070001, #2a0208 58%, #040101); overflow:hidden; }
-  .use{ display:grid; grid-template-columns:minmax(0,1fr); gap:56px; align-items:center; min-width:0; }
-  .use > *{ min-width:0; }
-  @media (min-width:960px){ .use{ grid-template-columns:1fr 1fr; gap:80px; } }
-  .use-list{ display:flex; flex-direction:column; }
-  .use-item{ width:100%; display:grid; grid-template-columns:56px 1fr; gap:20px; padding:28px 0; border:0; border-top:1px solid var(--line); background:none; color:inherit; text-align:left; cursor:pointer; transition:opacity .3s var(--ease); }
-  .use-item:last-child{ border-bottom:1px solid var(--line); }
-  .use-item:not(.active){ opacity:.56; }
-  .use-item:hover, .use-item:focus-visible, .use-item.active{ opacity:1; }
-  .use-item:focus-visible{ outline:1px solid rgba(255,255,255,.65); outline-offset:8px; border-radius:2px; }
-  .use-n{ width:48px; height:48px; border-radius:50%; border:1px solid rgba(255,255,255,.25); display:flex; align-items:center; justify-content:center; font-family:var(--display); font-size:18px; transition:background .3s var(--ease), border-color .3s var(--ease), color .3s var(--ease); }
-  .use-item:hover .use-n, .use-item:focus-visible .use-n, .use-item.active .use-n{ background:var(--red); border-color:var(--red); color:#fff; }
-  .use-copy{ display:block; }
-  .use-title{ display:block; font-family:var(--display); font-weight:400; font-size:24px; letter-spacing:-0.04em; }
-  .use-desc{ display:block; margin-top:6px; font-size:15px; line-height:1.55; color:var(--soft); }
-  .phone-stage{ position:relative; width:100%; max-width:100%; min-width:0; overflow:hidden; }
-  @media (min-width:960px){ .phone-stage{ position:sticky; top:110px; } }
-  .phone{ position:relative; min-height:620px; display:flex; align-items:center; justify-content:center; }
-  .phone svg{ position:absolute; inset:0; width:100%; height:100%; }
-  .phone img{ position:relative; z-index:1; display:block; width:auto; max-width:min(82%, 440px); max-height:720px; object-fit:contain; filter:drop-shadow(0 30px 50px rgba(0,0,0,.55)); transition:opacity .22s ease, transform .38s var(--ease); }
-  .phone img.changing{ opacity:0; transform:translateY(14px) scale(.985); }
-  @media (max-width:959px){ .phone{ min-height:0; aspect-ratio:4/5; } .phone img{ max-width:min(78%, 400px); max-height:94%; } }
+  .use-intro{ max-width:900px; margin-bottom:clamp(36px,5vw,64px); }
+  .use-carousel{ position:relative; overflow:hidden; border:1px solid rgba(206,186,152,.2); border-radius:30px; background:linear-gradient(145deg,rgba(206,186,152,.085),rgba(255,255,255,.018)); box-shadow:0 36px 90px rgba(0,0,0,.32),inset 1px 1px 0 rgba(255,255,255,.09); }
+  .use-viewport{ overflow:hidden; }
+  .use-track{ display:flex; transition:transform .65s var(--ease); will-change:transform; }
+  .use-slide{ position:relative; flex:0 0 100%; min-width:0; display:grid; grid-template-columns:minmax(0,.82fr) minmax(380px,1.18fr); align-items:center; min-height:610px; }
+  .use-slide-copy{ position:relative; z-index:2; padding:clamp(42px,6vw,78px); }
+  .use-step{ display:inline-flex; align-items:center; gap:12px; margin-bottom:24px; font-size:11px; font-weight:500; letter-spacing:.22em; text-transform:uppercase; color:var(--soft); }
+  .use-step::before{ content:""; width:28px; height:1px; background:var(--red); }
+  .use-step strong{ color:var(--white); font-size:13px; letter-spacing:.08em; }
+  .use-slide-title{ max-width:520px; font-family:var(--display); font-weight:300; font-size:clamp(40px,4.4vw,68px); letter-spacing:-.055em; line-height:.95; color:var(--beige); }
+  .use-slide-desc{ max-width:480px; margin-top:24px; font-size:clamp(15px,1.35vw,18px); line-height:1.58; color:var(--soft); }
+  .use-slide-media{ position:relative; align-self:stretch; min-width:0; min-height:610px; display:flex; align-items:center; justify-content:center; overflow:hidden; padding:42px 42px 76px; }
+  .use-slide-media::before{ content:""; position:absolute; width:min(82%,520px); aspect-ratio:1; border:1px solid rgba(206,186,152,.26); border-radius:50%; background:radial-gradient(circle,rgba(107,17,25,.68),rgba(0,0,0,0) 67%); box-shadow:inset 24px 18px 60px rgba(255,255,255,.025); }
+  .use-slide-media img{ position:relative; z-index:1; width:auto; max-width:min(78%,420px); max-height:520px; object-fit:contain; filter:drop-shadow(0 28px 46px rgba(0,0,0,.58)); transform:translateY(12px); }
+  .use-controls{ position:absolute; z-index:4; left:clamp(30px,5vw,70px); right:clamp(30px,5vw,70px); bottom:28px; display:flex; align-items:center; gap:14px; }
+  .use-arrow{ width:44px; height:44px; flex:none; display:grid; place-items:center; border:1px solid rgba(206,186,152,.24); border-radius:50%; background:rgba(4,1,1,.34); color:var(--white); cursor:pointer; transition:background .25s,border-color .25s,transform .25s var(--ease); }
+  .use-arrow:hover{ transform:translateY(-2px); border-color:rgba(206,186,152,.62); background:rgba(206,186,152,.11); }
+  .use-arrow:focus-visible,.use-dot:focus-visible{ outline:2px solid var(--beige); outline-offset:3px; }
+  .use-arrow [data-lucide]{ width:18px; height:18px; }
+  .use-dots{ display:flex; align-items:center; gap:8px; }
+  .use-dot{ width:26px; height:4px; padding:0; border:0; border-radius:99px; background:rgba(206,186,152,.24); cursor:pointer; transition:width .3s var(--ease),background .3s; }
+  .use-dot[aria-selected="true"]{ width:52px; background:var(--red); }
+  .use-count{ margin-left:auto; font-family:var(--display); font-size:13px; letter-spacing:.08em; color:var(--dim); }
+  .use-count strong{ color:var(--white); font-size:18px; font-weight:400; }
   @media (max-width:520px){
     #como-usar.section{ padding-top:72px; padding-bottom:72px; }
     #como-usar .eyebrow{ font-size:10px; letter-spacing:.19em; }
-    #como-usar .display{ max-width:100%; margin:20px 0 32px !important; font-size:30px; line-height:1.04; }
-    .use{ gap:34px; }
-    .use-list{ flex-direction:row; gap:12px; width:100%; max-width:100%; overflow-x:auto; overflow-y:hidden; padding:4px 28px 18px 0; scroll-snap-type:x mandatory; overscroll-behavior-x:contain; scrollbar-width:none; touch-action:pan-x; }
-    .use-list::-webkit-scrollbar{ display:none; }
-    .use-item{ flex:0 0 min(82vw, 340px); min-height:178px; grid-template-columns:44px 1fr; gap:14px; padding:20px; border:1px solid rgba(255,255,255,.11); border-radius:18px; background:linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.018)); scroll-snap-align:start; box-shadow:inset 1px 1px 0 rgba(255,255,255,.08); }
-    .use-item:last-child{ border-bottom:1px solid rgba(255,255,255,.11); }
-    .use-item:not(.active){ opacity:.68; }
-    .use-n{ width:42px; height:42px; }
-    .use-title{ font-size:22px; line-height:1.08; }
-    .use-desc{ margin-top:10px; font-size:14px; line-height:1.5; }
-    .phone{ aspect-ratio:3/4; }
-    .phone img{ max-width:88%; }
+    #como-usar .display{ max-width:100%; margin:20px 0 0 !important; font-size:32px; line-height:1.03; }
+    .use-intro{ margin-bottom:30px; }
+    .use-carousel{ border-radius:22px; }
+    .use-slide{ grid-template-columns:1fr; min-height:0; }
+    .use-slide-copy{ padding:30px 24px 10px; }
+    .use-step{ margin-bottom:18px; }
+    .use-slide-title{ font-size:34px; line-height:.98; }
+    .use-slide-desc{ margin-top:16px; font-size:14px; line-height:1.5; }
+    .use-slide-media{ min-height:430px; padding:20px 18px 70px; }
+    .use-slide-media::before{ width:94%; }
+    .use-slide-media img{ max-width:86%; max-height:390px; transform:translateY(6px); }
+    .use-controls{ left:18px; right:18px; bottom:16px; gap:10px; }
+    .use-arrow{ width:40px; height:40px; }
+    .use-dot{ width:18px; }
+    .use-dot[aria-selected="true"]{ width:34px; }
+    .use-count{ display:none; }
   }
 
   /* ============ FAQ ============ */
@@ -693,37 +701,46 @@
 <!-- ================= COMO UTILIZAR ================= -->
 <section class="section" id="como-usar">
   <div class="wrap">
-    <div class="use">
-      <div class="reveal">
-        <span class="eyebrow">Como utilizar os benefícios</span>
-        <h2 class="display" style="margin:22px 0 48px">Do Universo conquistado <span class="d">ao privilégio de pertencer.</span></h2>
-        <div class="use-list" role="tablist" aria-label="Etapas para utilizar os benefícios">
-          <button class="use-item active" type="button" role="tab" aria-selected="true" aria-controls="usePhone" data-screen="images/image 01.png" data-alt="Tela inicial de fidelidade do app Red Flamboyant"><span class="use-n">1</span><span class="use-copy"><span class="use-title">Abra o App</span><span class="use-desc">Abra o App e clique na aba Red Flamboyant.</span></span></button>
-          <button class="use-item" type="button" role="tab" aria-selected="false" aria-controls="usePhone" data-screen="images/image 02.png" data-alt="Tela de detalhes e resgate de um benefício no app Red Flamboyant"><span class="use-n">2</span><span class="use-copy"><span class="use-title">Selecione o benefício</span><span class="use-desc">Selecione o benefício e clique em Resgatar.</span></span></button>
-          <button class="use-item" type="button" role="tab" aria-selected="false" aria-controls="usePhone" data-screen="images/image 03.png" data-alt="Tela com o código do benefício resgatado no app Red Flamboyant"><span class="use-n">3</span><span class="use-copy"><span class="use-title">Receba o código</span><span class="use-desc">O sistema gera o código específico para utilização do benefício resgatado.</span></span></button>
-          <button class="use-item" type="button" role="tab" aria-selected="false" aria-controls="usePhone" data-screen="images/image 04.png" data-alt="Tela para validação do benefício resgatado na loja"><span class="use-n">4</span><span class="use-copy"><span class="use-title">Valide na loja</span><span class="use-desc">Cliente vai até a loja e informa o benefício, mostrando o App para o vendedor validar.</span></span></button>
-          <button class="use-item" type="button" role="tab" aria-selected="false" aria-controls="usePhone" data-screen="images/image 02.png" data-alt="Tela do benefício liberado para utilização"><span class="use-n">5</span><span class="use-copy"><span class="use-title">Utilize o benefício</span><span class="use-desc">Benefício liberado para utilização do cliente.</span></span></button>
+    <div class="use-intro reveal">
+      <span class="eyebrow">Como utilizar os benefícios</span>
+      <h2 class="display" style="margin:22px 0 0">Do Universo conquistado <span class="d">ao privilégio de pertencer.</span></h2>
+    </div>
+    <div class="use-carousel reveal" tabindex="0" aria-roledescription="carrossel" aria-label="Etapas para utilizar os benefícios">
+      <div class="use-viewport">
+        <div class="use-track">
+          <article class="use-slide is-active" id="useSlide1" role="group" aria-roledescription="slide" aria-label="1 de 5" aria-hidden="false">
+            <div class="use-slide-copy"><span class="use-step"><strong>01</strong> Primeira etapa</span><h3 class="use-slide-title">Abra o App</h3><p class="use-slide-desc">Abra o App e clique na aba Red Flamboyant.</p></div>
+            <div class="use-slide-media"><img src="images/image 01.png" alt="Tela inicial de fidelidade do app Red Flamboyant" loading="lazy"></div>
+          </article>
+          <article class="use-slide" id="useSlide2" role="group" aria-roledescription="slide" aria-label="2 de 5" aria-hidden="true">
+            <div class="use-slide-copy"><span class="use-step"><strong>02</strong> Segunda etapa</span><h3 class="use-slide-title">Selecione o benefício</h3><p class="use-slide-desc">Selecione o benefício e clique em Resgatar.</p></div>
+            <div class="use-slide-media"><img src="images/image 02.png" alt="Tela de detalhes e resgate de um benefício no app Red Flamboyant" loading="lazy"></div>
+          </article>
+          <article class="use-slide" id="useSlide3" role="group" aria-roledescription="slide" aria-label="3 de 5" aria-hidden="true">
+            <div class="use-slide-copy"><span class="use-step"><strong>03</strong> Terceira etapa</span><h3 class="use-slide-title">Receba o código</h3><p class="use-slide-desc">O sistema gera o código específico para utilização do benefício resgatado.</p></div>
+            <div class="use-slide-media"><img src="images/image 03.png" alt="Tela com o código do benefício resgatado no app Red Flamboyant" loading="lazy"></div>
+          </article>
+          <article class="use-slide" id="useSlide4" role="group" aria-roledescription="slide" aria-label="4 de 5" aria-hidden="true">
+            <div class="use-slide-copy"><span class="use-step"><strong>04</strong> Quarta etapa</span><h3 class="use-slide-title">Valide na loja</h3><p class="use-slide-desc">Cliente vai até a loja e informa o benefício, mostrando o App para o vendedor validar.</p></div>
+            <div class="use-slide-media"><img src="images/image 04.png" alt="Tela para validação do benefício resgatado na loja" loading="lazy"></div>
+          </article>
+          <article class="use-slide" id="useSlide5" role="group" aria-roledescription="slide" aria-label="5 de 5" aria-hidden="true">
+            <div class="use-slide-copy"><span class="use-step"><strong>05</strong> Quinta etapa</span><h3 class="use-slide-title">Utilize o benefício</h3><p class="use-slide-desc">Benefício liberado para utilização do cliente.</p></div>
+            <div class="use-slide-media"><img src="images/image 02.png" alt="Tela do benefício liberado para utilização" loading="lazy"></div>
+          </article>
         </div>
       </div>
-      <div class="reveal phone-stage">
-        <div class="phone">
-          <svg viewBox="0 0 600 600" aria-hidden="true">
-            <defs>
-              <linearGradient id="arcStroke" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#fff" stop-opacity=".9"/>
-                <stop offset=".75" stop-color="#fff" stop-opacity=".15"/>
-                <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-              </linearGradient>
-              <radialGradient id="phoneGlow" cx="50%" cy="35%" r="55%">
-                <stop offset="0" stop-color="#6b1119" stop-opacity=".75"/>
-                <stop offset="1" stop-color="#000" stop-opacity="0"/>
-              </radialGradient>
-            </defs>
-            <circle cx="300" cy="300" r="280" fill="url(#phoneGlow)"/>
-            <circle cx="300" cy="300" r="280" fill="none" stroke="url(#arcStroke)" stroke-width="1.4"/>
-          </svg>
-          <img id="usePhone" src="images/image 01.png" alt="Tela inicial de fidelidade do app Red Flamboyant">
+      <div class="use-controls">
+        <button class="use-arrow use-prev" type="button" aria-label="Etapa anterior"><i data-lucide="arrow-left"></i></button>
+        <div class="use-dots" role="tablist" aria-label="Selecionar etapa">
+          <button class="use-dot" type="button" role="tab" aria-selected="true" aria-controls="useSlide1" aria-label="Etapa 1"></button>
+          <button class="use-dot" type="button" role="tab" aria-selected="false" aria-controls="useSlide2" aria-label="Etapa 2"></button>
+          <button class="use-dot" type="button" role="tab" aria-selected="false" aria-controls="useSlide3" aria-label="Etapa 3"></button>
+          <button class="use-dot" type="button" role="tab" aria-selected="false" aria-controls="useSlide4" aria-label="Etapa 4"></button>
+          <button class="use-dot" type="button" role="tab" aria-selected="false" aria-controls="useSlide5" aria-label="Etapa 5"></button>
         </div>
+        <div class="use-count" aria-live="polite"><strong>01</strong> / 05</div>
+        <button class="use-arrow use-next" type="button" aria-label="Próxima etapa"><i data-lucide="arrow-right"></i></button>
       </div>
     </div>
   </div>
@@ -871,46 +888,59 @@
     });
   });
 
-  // Interactive app flow
-  const useItems = [...document.querySelectorAll('.use-item[data-screen]')];
-  const usePhone = document.getElementById('usePhone');
-  let screenTimer;
-  const selectUseStep = (item, focus = false) => {
-    if (!item || item.classList.contains('active')) return;
-    useItems.forEach(step => {
-      const selected = step === item;
-      step.classList.toggle('active', selected);
-      step.setAttribute('aria-selected', selected ? 'true' : 'false');
-      step.tabIndex = selected ? 0 : -1;
-    });
-    if (focus) item.focus();
-    if (window.matchMedia('(max-width:520px)').matches) {
-      const list = item.closest('.use-list');
-      const left = item.offsetLeft - Math.max(0, (list.clientWidth - item.offsetWidth) / 2);
-      list.scrollTo({ left, behavior:'smooth' });
-    }
-    clearTimeout(screenTimer);
-    usePhone.classList.add('changing');
-    screenTimer = setTimeout(() => {
-      usePhone.src = item.dataset.screen;
-      usePhone.alt = item.dataset.alt;
-      requestAnimationFrame(() => usePhone.classList.remove('changing'));
-    }, 180);
-  };
-  useItems.forEach((item, index) => {
-    item.tabIndex = index === 0 ? 0 : -1;
-    item.addEventListener('click', () => selectUseStep(item));
-    item.addEventListener('keydown', (event) => {
-      if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
+  // Benefits usage carousel
+  const useCarousel = document.querySelector('.use-carousel');
+  if (useCarousel) {
+    const useTrack = useCarousel.querySelector('.use-track');
+    const useSlides = [...useCarousel.querySelectorAll('.use-slide')];
+    const useDots = [...useCarousel.querySelectorAll('.use-dot')];
+    const useCount = useCarousel.querySelector('.use-count strong');
+    const useViewport = useCarousel.querySelector('.use-viewport');
+    let useIndex = 0;
+    let swipeStartX = null;
+
+    const showUseSlide = (target, focusDot = false) => {
+      useIndex = (target + useSlides.length) % useSlides.length;
+      useTrack.style.transform = `translate3d(-${useIndex * 100}%,0,0)`;
+      useSlides.forEach((slide, index) => {
+        const active = index === useIndex;
+        slide.classList.toggle('is-active', active);
+        slide.setAttribute('aria-hidden', active ? 'false' : 'true');
+      });
+      useDots.forEach((dot, index) => {
+        const active = index === useIndex;
+        dot.setAttribute('aria-selected', active ? 'true' : 'false');
+        dot.tabIndex = active ? 0 : -1;
+      });
+      useCount.textContent = String(useIndex + 1).padStart(2, '0');
+      if (focusDot) useDots[useIndex].focus();
+    };
+
+    useCarousel.querySelector('.use-prev').addEventListener('click', () => showUseSlide(useIndex - 1));
+    useCarousel.querySelector('.use-next').addEventListener('click', () => showUseSlide(useIndex + 1));
+    useDots.forEach((dot, index) => dot.addEventListener('click', () => showUseSlide(index)));
+    useCarousel.addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
       event.preventDefault();
-      let target = index;
-      if (event.key === 'ArrowDown') target = (index + 1) % useItems.length;
-      if (event.key === 'ArrowUp') target = (index - 1 + useItems.length) % useItems.length;
-      if (event.key === 'Home') target = 0;
-      if (event.key === 'End') target = useItems.length - 1;
-      selectUseStep(useItems[target], true);
+      if (event.key === 'ArrowLeft') showUseSlide(useIndex - 1, true);
+      if (event.key === 'ArrowRight') showUseSlide(useIndex + 1, true);
+      if (event.key === 'Home') showUseSlide(0, true);
+      if (event.key === 'End') showUseSlide(useSlides.length - 1, true);
     });
-  });
+    useViewport.addEventListener('pointerdown', event => {
+      if (event.pointerType === 'mouse') return;
+      swipeStartX = event.clientX;
+    }, { passive:true });
+    useViewport.addEventListener('pointerup', event => {
+      if (swipeStartX === null) return;
+      const distance = event.clientX - swipeStartX;
+      swipeStartX = null;
+      if (Math.abs(distance) < 42) return;
+      showUseSlide(useIndex + (distance < 0 ? 1 : -1));
+    }, { passive:true });
+
+    showUseSlide(0);
+  }
 
   // Directional highlights for glass surfaces
   document.querySelectorAll('.panel').forEach(surface => {
