@@ -16,13 +16,13 @@
   :root{
     --black:#040101; --wine:#2a0208; --wine-deep:#070001; --red:#c4151f; --red-hot:#d81b25;
     --cream:#eeeae8; --paper:#fbf9f8; --ink:#140709; --ink-soft:rgba(20,7,9,.62);
-    --line:rgba(255,255,255,.12); --soft:rgba(255,255,255,.68); --dim:rgba(255,255,255,.4);
+    --beige:#ceba98; --line:rgba(206,186,152,.14); --soft:rgba(206,186,152,.76); --dim:rgba(206,186,152,.46);
     --display:'Utile Web','DM Sans',system-ui,sans-serif; --body:'Utile Web','Inter',system-ui,sans-serif;
     --ease:cubic-bezier(.16,1,.3,1); --pad:clamp(20px,4vw,48px);
   }
   *,*::before,*::after{ box-sizing:border-box; }
   html{ scroll-behavior:smooth; scroll-padding-top:28px; }
-  body{ margin:0; background:var(--black); color:#fff; font-family:var(--body); -webkit-font-smoothing:antialiased; }
+  body{ margin:0; background:var(--black); color:var(--beige); font-family:var(--body); -webkit-font-smoothing:antialiased; }
   a{ color:inherit; text-decoration:none; }
   img{ display:block; max-width:100%; }
   p,h1,h2,h3{ margin:0; }
@@ -31,10 +31,10 @@
 
   .hero{ position:relative; min-height:76vh; overflow:hidden; background:radial-gradient(55% 80% at 78% 38%, rgba(69,4,17,.5), transparent 68%), radial-gradient(42% 62% at 12% 88%, rgba(42,2,8,.48), transparent 72%), var(--black); }
   .topline{ position:relative; z-index:2; padding:10px 16px; border-bottom:1px solid var(--line); text-align:center; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--soft); }
-  .nav{ position:relative; z-index:3; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:8px var(--pad); }
+  .nav{ position:relative; z-index:3; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:18px var(--pad); }
   .brand{ display:flex; align-items:center; flex:none; }
-  .brand img{ display:block; width:auto; height:68px; object-fit:contain; }
-  @media(min-width:900px){ .brand img{ height:82px; } }
+  .brand img{ display:block; width:auto; height:28px; object-fit:contain; }
+  @media(min-width:900px){ .brand img{ height:34px; } }
   .back{ display:inline-flex; align-items:center; gap:9px; min-height:42px; padding:0 16px; border:1px solid rgba(255,255,255,.22); border-radius:100px; background:rgba(255,255,255,.055); backdrop-filter:blur(16px); font-size:14px; transition:.3s var(--ease); }
   .back:hover{ transform:translateY(-2px); border-color:rgba(255,255,255,.48); background:rgba(255,255,255,.11); }
   .back [data-lucide]{ width:16px; height:16px; }
@@ -94,9 +94,9 @@
   .footer-row{ display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:36px; padding-bottom:34px; border-bottom:1px solid var(--line); }
   .footer-logo{ width:150px; height:auto; }
   .footer-copy{ max-width:430px; font-size:13px; line-height:1.6; color:var(--dim); }
-  .footer-copy a{ display:inline-flex; align-items:center; gap:7px; margin-top:14px; color:rgba(255,255,255,.78); }
+  .footer-copy a{ display:inline-flex; align-items:center; gap:7px; margin-top:14px; color:rgba(206,186,152,.84); }
   .footer-copy [data-lucide]{ width:14px; height:14px; }
-  .copyright{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; padding-top:24px; font-size:12px; color:rgba(255,255,255,.38); }
+  .copyright{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; padding-top:24px; font-size:12px; color:rgba(206,186,152,.44); }
   @media(min-width:980px){ .legal-grid{ grid-template-columns:280px minmax(0,1fr); gap:56px; } .side{ position:sticky; top:28px; } .legal-nav{ flex-direction:column; overflow:visible; } }
   @media(max-width:620px){ .back .label{ display:none; } .back{ width:42px; padding:0; justify-content:center; } .hero-copy{ padding-top:64px; } .side-card{ padding:12px; } .legal-nav{ flex-direction:column; overflow:visible; } .legal-nav a{ width:100%; white-space:normal; } .document{ border-radius:20px; } }
   @media(prefers-reduced-motion:reduce){ *{ scroll-behavior:auto!important; transition:none!important; } }
@@ -106,7 +106,7 @@
   <header class="hero">
     <div class="topline">Red Flamboyant · Programa de Experiências</div>
     <nav class="nav wrap" aria-label="Navegação principal">
-      <a class="brand" href="flamboyant-v0-claude.html" aria-label="Red Flamboyant, Programa de Experiências"><img src="images/logo-red.png" alt="Red Flamboyant, Programa de Experiências"></a>
+      <a class="brand" href="flamboyant-v0-claude.html" aria-label="Red Flamboyant"><img src="images/logo-horizontal.png" alt="Red Flamboyant"></a>
       <a class="back" href="flamboyant-v0-claude.html"><i data-lucide="arrow-left"></i><span class="label">Voltar ao programa</span></a>
     </nav>
     <div class="hero-copy">
