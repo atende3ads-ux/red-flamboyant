@@ -337,7 +337,7 @@
   td.ok{ color:var(--red); }
   td.ok [data-lucide]{ width:19px; height:19px; stroke-width:2; filter:drop-shadow(0 3px 7px rgba(200,25,31,.18)); }
   td.no{ color:#766266; }
-  .no-label{ display:inline-block; max-width:86px; font-size:10px; line-height:1.25; letter-spacing:.07em; text-transform:uppercase; }
+  .no-label{ display:inline-block; font-size:18px; line-height:1; }
   td.tbd{ color:#8a6318; font-style:italic; }
   .caption{ display:flex; align-items:center; gap:10px; margin-top:20px; padding-left:4px; font-size:13px; color:var(--ink-soft); }
   #beneficios .caption{ color:var(--soft); }
@@ -371,7 +371,7 @@
     .benefit-label{ width:100%; min-width:0; gap:11px; font-size:13px; line-height:1.35; overflow-wrap:anywhere; }
     .benefit-icon{ width:34px; height:34px; border-radius:11px; }
     td.ok::after{ content:"Incluído"; color:rgba(42,24,28,.62); font-size:12px; font-weight:500; }
-    .no-label{ max-width:none; font-size:9px; }
+    .no-label{ font-size:18px; }
   }
 
   /* ============ LOUNGE ============ */
@@ -560,7 +560,7 @@
       linear-gradient(145deg, #ac1019, var(--red) 56%, #9b0d17);
   }
   thead th{ background:var(--tier-red); border-color:rgba(255,255,255,.14); }
-  thead th:first-child{ background:var(--maroon); }
+  thead th:first-child{ background:var(--tier-red); }
   thead th:last-child{ background:var(--tier-rubi-bg); }
   .tier-head-copy small{ color:rgba(255,255,255,.72); }
   .tier-head-copy strong{ color:var(--white); }
@@ -691,7 +691,7 @@
         <div class="tier-body">
           <strong class="tier-threshold">50.000 a 149.999 pontos</strong>
           <p class="tier-lead">Acesso a um universo mais seleto.</p>
-          <p class="tier-copy">Experiências diferenciadas, eventos exclusivos, acesso ao Lounge Flamboyant e benefícios no valet, além de todos os benefícios das categorias anteriores.</p>
+          <p class="tier-copy">Experiências diferenciadas, eventos exclusivos, acesso ao Lounge Red Flamboyant e benefícios no valet, além de todos os benefícios das categorias anteriores.</p>
         </div>
       </article>
       <article class="tier" style="--tc:var(--tier-rubi);--tier-head:var(--tier-rubi-bg)">
@@ -699,7 +699,7 @@
         <div class="tier-body">
           <strong class="tier-threshold">A partir de 150.000 pontos</strong>
           <p class="tier-lead">O mais alto estágio de relacionamento.</p>
-          <p class="tier-copy">Experiências únicas, reconhecimento especial, eventos exclusivos, acesso ilimitado ao Lounge Flamboyant e valet, além de todos os benefícios das categorias anteriores.</p>
+          <p class="tier-copy">Experiências únicas, reconhecimento especial, eventos exclusivos, acesso ilimitado ao Lounge Red Flamboyant e valet, além de todos os benefícios das categorias anteriores.</p>
         </div>
       </article>
     </div>
@@ -743,11 +743,11 @@
           <tr><th><span class="benefit-label"><span class="benefit-icon"><i data-lucide="badge-percent"></i></span>Desconto em lojas e serviços</span></th><td class="ok"><i data-lucide="check"></i></td><td class="ok"><i data-lucide="check"></i></td><td class="ok"><i data-lucide="check"></i></td><td class="ok"><i data-lucide="check"></i></td></tr>
           <tr><th><span class="benefit-label"><span class="benefit-icon"><i data-lucide="gift"></i></span>Brindes em lojas</span></th><td class="ok"><i data-lucide="check"></i></td><td class="ok"><i data-lucide="check"></i></td><td class="ok"><i data-lucide="check"></i></td><td class="ok"><i data-lucide="check"></i></td></tr>
           <tr><th><span class="benefit-label"><span class="benefit-icon"><i data-lucide="calendar"></i></span>Benefícios em Eventos proprietários e parceiros</span></th><td class="ok"><i data-lucide="check"></i></td><td class="ok"><i data-lucide="check"></i></td><td class="ok"><i data-lucide="check"></i></td><td class="ok"><i data-lucide="check"></i></td></tr>
-          <tr><th><span class="benefit-label"><span class="benefit-icon"><i data-lucide="clover"></i></span>Números da sorte (promoções)</span></th><td class="no"><span class="no-label">Não disponível</span></td><td class="no"><span class="no-label">Não disponível</span></td><td>Pontuação em dobro</td><td>Pontuação em dobro</td></tr>
-          <tr><th><span class="benefit-label"><span class="benefit-icon"><i data-lucide="armchair"></i></span>Lounge Flamboyant</span></th><td class="no"><span class="no-label">Não disponível</span></td><td class="no"><span class="no-label">Não disponível</span></td><td>Acesso 2× ao mês, com direito a 2 acompanhantes</td><td>Acesso ilimitado, com direito a 2 acompanhantes</td></tr>
-          <tr><th><span class="benefit-label"><span class="benefit-icon"><i data-lucide="car-front"></i></span>Estacionamento/ Valet</span></th><td class="no"><span class="no-label">Não disponível</span></td><td>Cortesias de estacionamento</td><td>Valet e estacionamento 1x ao mês</td><td>Valet e estacionamento ilimitado</td></tr>
-          <tr><th><span class="benefit-label"><span class="benefit-icon"><i data-lucide="star"></i></span>Ações e eventos exclusivos</span></th><td class="no"><span class="no-label">Não disponível</span></td><td class="no"><span class="no-label">Não disponível</span></td><td>Convites a lançamentos exclusivos</td><td>Convite nos principais eventos</td></tr>
-          <tr><th><span class="benefit-label"><span class="benefit-icon"><i data-lucide="gem"></i></span>Experiências premium</span></th><td class="no"><span class="no-label">Não disponível</span></td><td class="no"><span class="no-label">Não disponível</span></td><td class="no"><span class="no-label">Não disponível</span></td><td>Experiências exclusivas</td></tr>
+          <tr><th><span class="benefit-label"><span class="benefit-icon"><i data-lucide="clover"></i></span>Números da sorte (promoções)</span></th><td>Pontuação geral</td><td>Pontuação geral</td><td>Pontuação em dobro</td><td>Pontuação em dobro</td></tr>
+          <tr><th><span class="benefit-label"><span class="benefit-icon"><i data-lucide="armchair"></i></span>Lounge Red Flamboyant</span></th><td class="no"><span class="no-label" role="img" aria-label="Não disponível">–</span></td><td class="no"><span class="no-label" role="img" aria-label="Não disponível">–</span></td><td>Acesso 2× ao mês, com direito a 2 acompanhantes</td><td>Acesso ilimitado, com direito a 2 acompanhantes</td></tr>
+          <tr><th><span class="benefit-label"><span class="benefit-icon"><i data-lucide="car-front"></i></span>Estacionamento/ Valet</span></th><td class="no"><span class="no-label" role="img" aria-label="Não disponível">–</span></td><td>Cortesias de estacionamento</td><td>Valet e estacionamento 1x ao mês</td><td>Valet e estacionamento ilimitado</td></tr>
+          <tr><th><span class="benefit-label"><span class="benefit-icon"><i data-lucide="star"></i></span>Ações e eventos exclusivos</span></th><td class="no"><span class="no-label" role="img" aria-label="Não disponível">–</span></td><td class="no"><span class="no-label" role="img" aria-label="Não disponível">–</span></td><td>Convites a lançamentos exclusivos</td><td>Convite nos principais eventos</td></tr>
+          <tr><th><span class="benefit-label"><span class="benefit-icon"><i data-lucide="gem"></i></span>Experiências premium</span></th><td class="no"><span class="no-label" role="img" aria-label="Não disponível">–</span></td><td class="no"><span class="no-label" role="img" aria-label="Não disponível">–</span></td><td class="no"><span class="no-label" role="img" aria-label="Não disponível">–</span></td><td>Experiências exclusivas</td></tr>
         </tbody>
       </table>
     </div>
