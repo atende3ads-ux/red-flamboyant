@@ -381,8 +381,9 @@
   #lounge .lede{ color:rgba(27,11,13,.68); }
   .lounge-grid{ display:grid; gap:42px; align-items:center; }
   @media (min-width:900px){ .lounge-grid{ grid-template-columns:1.05fr .95fr; gap:70px; } }
-  .lounge-gallery{ position:relative; }
-  .lounge-gallery img{ width:100%; height:clamp(380px, 48vw, 620px); object-fit:cover; border-radius:24px; border:1px solid rgba(255,255,255,.64); box-shadow:0 32px 70px rgba(55,25,18,.25); }
+  .lounge-gallery{ position:relative; display:grid; gap:16px; }
+  .lounge-gallery img{ width:100%; height:clamp(260px, 30vw, 400px); object-fit:cover; border-radius:24px; border:1px solid rgba(255,255,255,.64); box-shadow:0 32px 70px rgba(55,25,18,.25); }
+  .lounge-gallery img + img{ height:clamp(220px, 24vw, 320px); object-position:50% 40%; }
   .lounge-meta{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:32px; }
   .lounge-meta article{ padding:20px; border-radius:16px; background:rgba(255,255,255,.26); border:1px solid rgba(255,255,255,.5); -webkit-backdrop-filter:blur(18px); backdrop-filter:blur(18px); }
   .lounge-meta small{ display:block; margin-bottom:8px; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(27,11,13,.5); }
@@ -390,7 +391,7 @@
   .lounge-services{ margin:32px 0 0; padding:0; list-style:none; display:grid; gap:12px; }
   .lounge-services li{ display:flex; gap:11px; font-size:15px; line-height:1.45; color:rgba(27,11,13,.75); }
   .lounge-services li::before{ content:""; flex:none; width:6px; height:6px; margin-top:.48em; border-radius:50%; background:var(--red); }
-  @media (max-width:599px){ .lounge-gallery img{ height:320px; border-radius:18px; } .lounge-meta{ grid-template-columns:1fr; } }
+  @media (max-width:599px){ .lounge-gallery{ gap:12px; } .lounge-gallery img{ height:240px; border-radius:18px; } .lounge-gallery img + img{ height:200px; } .lounge-meta{ grid-template-columns:1fr; } }
 
   /* ============ COMO USAR ============ */
   #como-usar{ background:linear-gradient(145deg, #070001, #2a0208 58%, #040101); overflow:visible; }
@@ -756,6 +757,7 @@
   <div class="wrap lounge-grid">
     <div class="lounge-gallery reveal">
       <img src="images/lounge-principal.jpg" alt="Ambiente sofisticado do Lounge Red Flamboyant">
+      <img src="images/lounge-salao.jpg" alt="Salão do Lounge Red Flamboyant com luminárias douradas e poltrona vermelha" loading="lazy">
     </div>
     <div class="reveal">
       <span class="eyebrow">Lounge Red Flamboyant</span>
